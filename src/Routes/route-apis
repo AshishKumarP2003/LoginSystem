@@ -1,0 +1,12 @@
+const express = require('express');
+const routes = express.Router();
+const formidable = require('formidable');
+const { register } = require('../Controllers/Auth/db-register');
+const { login } = require('../Controllers/Auth/db-login');
+
+routes.post('/register', register);
+
+routes.post('/login', login);
+
+
+module.exports = routes;
