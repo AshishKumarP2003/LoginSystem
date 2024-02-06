@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const formidable = require('formidable');
+const { default: register } = require('../Controllers/Auth/register');
+
+router.get('/register', async (req, res) => {
+    const response = await register(req, res);
+});
+
+
+module.exports = router;
